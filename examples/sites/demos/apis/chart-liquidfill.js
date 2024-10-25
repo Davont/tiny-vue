@@ -108,7 +108,7 @@ export default {
           typeAnchorName: 'Data',
           desc: {
             'zh-CN': '图表数据',
-            'en-US': 'Chart Text'
+            'en-US': 'Chart Data'
           },
           mode: ['pc'],
           pcDemo: ''
