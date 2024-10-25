@@ -158,11 +158,10 @@
                         >
                           <tiny-grid-column class-name="api-table-expand-col" type="expand" width="32">
                             <template #default="{ row }">
-                              <async-highlight v-if="chartCode" :code="row.code.trim()" types="html"></async-highlight>
                               <async-highlight
-                                v-else-if="row.code"
+                                v-if="row.code"
                                 :code="row.code.trim()"
-                                types="ts"
+                                :types="chartCode ? 'html' : 'ts'"
                               ></async-highlight>
                               <div v-if="row.depTypes">
                                 <async-highlight
