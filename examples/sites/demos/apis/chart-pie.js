@@ -8,7 +8,7 @@ export default {
         {
           name: 'theme',
           type: 'string',
-          defaultValue: 'false',
+          defaultValue: 'cloud-light',
           typeAnchorName: 'Theme',
           desc: {
             'zh-CN': '图表主题',
@@ -128,7 +128,7 @@ export default {
         {
           name: 'silent',
           type: 'boolean',
-          defaultValue: 'false',
+          defaultValue: false,
           typeAnchorName: 'Silent',
           desc: {
             'zh-CN': '是否关闭hover动效',
@@ -176,7 +176,7 @@ export default {
         {
           name: 'selectedMode',
           type: 'boolean',
-          defaultValue: 'false',
+          defaultValue: false,
           typeAnchorName: 'SelectedMode',
           desc: {
             'zh-CN': '扇区选中模式配置',
@@ -188,7 +188,7 @@ export default {
         {
           name: 'roseType',
           type: 'boolean',
-          defaultValue: 'false',
+          defaultValue: false,
           typeAnchorName: 'RoseType',
           desc: {
             'zh-CN': '是否展示成南丁格尔图',
@@ -314,20 +314,6 @@ data:[
 </code></pre>
 </div></div><p data-v-md-line="11">说明：可以根据data数据中的某个<code>name</code>为其设置指定的颜色。</p>
 </div></div></div></td></tr></div>`
-    },
-    {
-      name: 'ItemStyle',
-      type: 'interface',
-      code: `<div class="tiny-huicharts"><tr class="tiny-grid-body__expanded-row"><td class="tiny-grid-body__expanded-column" colspan="5"><div class="tiny-grid-body__expanded-cell"><div class="v-md-editor-preview main-editor api-table" style="tab-size: 2;"><div class="github-markdown-body"><p data-v-md-line="1">默认值：</p>
-<div data-v-md-line="3"><div class="v-md-pre-wrapper v-md-pre-wrapper-d extra-class"><pre class="v-md-hljs-d"><code>itemStyle:{
-    borderColor:<span class="hljs-string">'#ffffff'</span>,
-    borderWidth:<span class="hljs-number">3</span>,
-    borderRadius:<span class="hljs-number">0</span>
-}
-</code></pre>
-</div></div><p data-v-md-line="11">说明：圆盘图的描边配置</p>
-<div data-v-md-line="13"><p class="ev_expand_title">itemStyle.borderColor<span class="ev_expand_required">非必填</span><span class="ev_expand_defaults">有默认值</span>&lt;span
-</p></div></div></div></div></td></tr></div>`
     },
     {
       name: 'Label',

@@ -9,7 +9,7 @@ export default {
         {
           name: 'theme',
           type: 'string',
-          defaultValue: 'light',
+          defaultValue: 'cloud-light',
           typeAnchorName: 'Theme',
           desc: {
             'zh-CN': '主题',

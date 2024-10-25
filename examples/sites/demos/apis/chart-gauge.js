@@ -8,7 +8,7 @@ export default {
         {
           name: 'theme',
           type: 'string',
-          defaultValue: 'false',
+          defaultValue: 'cloud-light',
           typeAnchorName: 'Theme',
           desc: {
             'zh-CN': '图表主题',

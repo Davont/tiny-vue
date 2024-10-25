@@ -205,7 +205,7 @@
                             </template>
                           </tiny-grid-column>
                           <tiny-grid-column
-                            v-if="key === 'props'"
+                            v-if="key === 'props' || key === 'options'"
                             field="defaultValue"
                             :title="i18nByKey('defValue')"
                             :width="columnWidth[key][2]"

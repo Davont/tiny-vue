@@ -8,7 +8,7 @@ export default {
         {
           name: 'theme',
           type: 'string',
-          defaultValue: 'false',
+          defaultValue: 'cloud-light',
           typeAnchorName: 'Theme',
           desc: {
             'zh-CN': '图表主题',
@@ -433,20 +433,6 @@ data:[
 
 说明：配置柱状图的方向
 `
-    },
-    {
-      name: 'ItemStyle',
-      type: 'interface',
-      code: `<div class="tiny-huicharts"><tr class="tiny-grid-body__expanded-row"><td class="tiny-grid-body__expanded-column" colspan="5"><div class="tiny-grid-body__expanded-cell"><div class="v-md-editor-preview main-editor api-table" style="tab-size: 2;"><div class="github-markdown-body"><p data-v-md-line="1">默认值：</p>
-<div data-v-md-line="3"><div class="v-md-pre-wrapper v-md-pre-wrapper-d extra-class"><pre class="v-md-hljs-d"><code>itemStyle:{
-    borderColor:<span class="hljs-string">'#ffffff'</span>,
-    borderWidth:<span class="hljs-number">3</span>,
-    borderRadius:<span class="hljs-number">0</span>
-}
-</code></pre>
-</div></div><p data-v-md-line="11">说明：圆盘图的描边配置</p>
-<div data-v-md-line="13"><p class="ev_expand_title">itemStyle.borderColor<span class="ev_expand_required">非必填</span><span class="ev_expand_defaults">有默认值</span>&lt;span
-</p></div></div></div></div></td></tr></div>`
     },
     {
       name: 'Label',

@@ -8,7 +8,7 @@ export default {
         {
           name: 'theme',
           type: 'string',
-          defaultValue: 'false',
+          defaultValue: 'cloud-light',
           typeAnchorName: 'Theme',
           desc: {
             'zh-CN': '图表主题',
@@ -83,8 +83,8 @@ export default {
           defaultValue: 'descending',
           typeAnchorName: 'Sort',
           desc: {
-            'zh-CN': '图表数据(必填)',
-            'en-US': 'Chart data (required)'
+            'zh-CN': '数据排序方式',
+            'en-US': 'Data sorting method'
           },
           mode: ['pc'],
           pcDemo: ''
@@ -132,7 +132,7 @@ export default {
           typeAnchorName: 'Data',
           desc: {
             'zh-CN': '图表数据',
-            'en-US': 'Chart Text'
+            'en-US': 'Chart Data'
           },
           mode: ['pc'],
           pcDemo: ''

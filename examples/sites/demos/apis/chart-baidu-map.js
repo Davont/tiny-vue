@@ -24,7 +24,7 @@ export default {
           typeAnchorName: 'Url',
           desc: {
             'zh-CN': '百度地图前缀地址',
-            'en-US': 'BaIdu map prefix address'
+            'en-US': 'Baidu map prefix address'
           },
           mode: ['pc'],
           pcDemo: ''

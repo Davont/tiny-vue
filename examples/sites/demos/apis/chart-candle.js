@@ -8,7 +8,7 @@ export default {
         {
           name: 'theme',
           type: 'string',
-          defaultValue: 'light',
+          defaultValue: 'cloud-light',
           typeAnchorName: 'Theme',
           desc: {
             'zh-CN': '主题',
@@ -133,7 +133,7 @@ export default {
           typeAnchorName: 'DownColor',
           desc: {
             'zh-CN': '下行数据颜色',
-            'en-US': 'Upward data color'
+            'en-US': 'Downward data color'
           },
           mode: ['pc'],
           pcDemo: ''
