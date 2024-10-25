@@ -104,10 +104,6 @@
     &.pre-month {
       color: var(--tv-DateTable-td-pre-month-text-color);
       cursor: pointer;
-
-      & span:hover {
-        background: var(--ti-datetime-beside-day-bg-color-hover);
-      }
     }
 
     &.today {
@@ -232,7 +228,6 @@
       div {
         margin-left: 4px;
         margin-right: 4px;
-        background-color: var(--tv-DateTable-td-bg-color-range-selected);
       }
 
       span {
@@ -245,6 +240,9 @@
       &.available:hover span {
         background-color: var(--tv-DateTable-bg-color-current-select);
       }
+    }
+    &.selected.in-range div{
+      background-color: var(--tv-DateTable-td-bg-color-range-selected);
     }
 
     &.week {
