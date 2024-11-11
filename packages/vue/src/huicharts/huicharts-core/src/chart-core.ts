@@ -26,7 +26,7 @@ export default {
     },
     width: { type: String, default: 'auto' },
     height: { type: String, default: '400px' },
-    events: { type: Object, default() { } },
+    events: { type: Object, default() {} },
     initOptions: {
       type: Object,
       default() {
@@ -72,7 +72,7 @@ export default {
     },
     extend: {
       type: Object,
-      default() { }
+      default() {}
     },
     tooltipFormatter: { type: Function },
 
@@ -120,7 +120,7 @@ export default {
     },
     setOptionOpts: {
       type: Object,
-      default() { }
+      default() {}
     },
     colorMode: {
       type: String,
@@ -349,7 +349,7 @@ export default {
         this.option.theme = 'cloud-light'
       }
       if (Array.isArray(this.colors) && this.colors.length > 0) {
-        option.color = cloneDeep(this.colors)
+        this.option.color = cloneDeep(this.colors)
       }
       const { data } = this
       if (Object.keys(this.options).length === 0) {
@@ -368,13 +368,13 @@ export default {
         this.selfSetting(option)
         this.setAnimation(option)
         this.applyMarks(this.integrateChart.eChartOption)
-        this.integrateChart.refresh(option)
+        this.integrateChart.refresh(cloneDeep(option))
         if (this.colorMode !== 'default') {
           option.color = this.computedChartColor()
         }
         if (this.extend && Object.keys(this.extend).length !== 0) {
           option.extend = this.applyExtend(this.integrateChart.eChartOption)
-          this.integrateChart.refresh(option)
+          this.integrateChart.refresh(cloneDeep(option))
         }
         this.$emit('handle-color', option.color)
         if (this.afterSetOption) {
@@ -418,7 +418,7 @@ export default {
         if (this.colorMode !== 'default') {
           option.color = this.computedChartColor()
         }
-        this.integrateChart.setSimpleOption(this.iChartName, option, plugins)
+        this.integrateChart.setSimpleOption(this.iChartName, cloneDeep(option), plugins)
         this.$emit('handle-color', option.color)
         this.applyMarks(this.integrateChart.eChartOption)
       }
@@ -426,7 +426,7 @@ export default {
       // 判断extend，将extend放入配置项中
       if (this.extend && Object.keys(this.extend).length !== 0) {
         option.extend = this.applyExtend(this.integrateChart.eChartOption)
-        this.integrateChart.setSimpleOption(this.iChartName, option, plugins)
+        this.integrateChart.setSimpleOption(this.iChartName, cloneDeep(option), plugins)
       }
       this.integrateChart.render(this.renderOption)
 
