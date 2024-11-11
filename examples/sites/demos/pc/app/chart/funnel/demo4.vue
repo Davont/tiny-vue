@@ -5,11 +5,11 @@
 </template>
 
 <script lang="jsx">
-import { TinyHuichartsFunnel } from '@opentiny/vue'
+import { TinyChartFunnel } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyFunnel: TinyHuichartsFunnel
+    TinyFunnel: TinyChartFunnel
   },
   data() {
     return {

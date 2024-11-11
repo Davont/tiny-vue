@@ -5,11 +5,11 @@
 </template>
 
 <script lang="jsx">
-import { TinyHuichartsSunburst } from '@opentiny/vue'
+import { TinyChartSunburst } from '@opentiny/vue'
 
 export default {
   components: {
-    TinySunburst: TinyHuichartsSunburst
+    TinySunburst: TinyChartSunburst
   },
   data() {
     return {

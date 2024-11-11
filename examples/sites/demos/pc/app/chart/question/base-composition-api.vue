@@ -17,7 +17,7 @@
 
 <script setup>
 import { ref, watch, nextTick } from 'vue'
-import { TinyTabs, TinyTabItem, TinyHuichartsLine as TinyChartLine } from '@opentiny/vue'
+import { TinyTabs, TinyTabItem, TinyChartLine } from '@opentiny/vue'
 
 const activeName = ref('1')
 const options = ref({

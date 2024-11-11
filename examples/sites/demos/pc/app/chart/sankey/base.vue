@@ -5,11 +5,11 @@
 </template>
 
 <script lang="jsx">
-import { TinyHuichartsSankey } from '@opentiny/vue'
+import { TinyChartSankey } from '@opentiny/vue'
 
 export default {
   components: {
-    TinySankey: TinyHuichartsSankey
+    TinySankey: TinyChartSankey
   },
   data() {
     return {

@@ -6,7 +6,7 @@
 
 <script setup lang="jsx">
 import { ref } from 'vue'
-import { TinyHuichartsBar as TinyChartBar } from '@opentiny/vue'
+import { TinyChartBar } from '@opentiny/vue'
 const options = ref({
   // 双向柱状图形态
   type: 'double-sides',

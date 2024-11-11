@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import { TinyHuichartsLine, TinyButton } from '@opentiny/vue'
+import { TinyChartLine, TinyButton } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyLine: TinyHuichartsLine,
+    TinyLine: TinyChartLine,
     TinyButton
   },
   data() {

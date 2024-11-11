@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import { TinyHuichartsRadar } from '@opentiny/vue'
+import { TinyChartRadar } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyRadar: TinyHuichartsRadar
+    TinyRadar: TinyChartRadar
   },
   data() {
     return {

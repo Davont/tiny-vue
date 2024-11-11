@@ -5,11 +5,11 @@
 </template>
 
 <script lang="jsx">
-import { TinyHuichartsAmap } from '@opentiny/vue'
+import { TinyChartAmap } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyAutonaviMap: TinyHuichartsAmap
+    TinyAutonaviMap: TinyChartAmap
   },
   data() {
     return {

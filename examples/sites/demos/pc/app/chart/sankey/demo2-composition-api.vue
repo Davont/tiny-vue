@@ -6,7 +6,7 @@
 
 <script setup lang="jsx">
 import { ref } from 'vue'
-import { TinyHuichartsSankey as TinyChartSankey } from '@opentiny/vue'
+import { TinyChartSankey } from '@opentiny/vue'
 
 const options = ref({
   padding: [70, 70, 70, 70],

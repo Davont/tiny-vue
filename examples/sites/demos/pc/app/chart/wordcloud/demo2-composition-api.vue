@@ -6,7 +6,7 @@
 
 <script setup lang="jsx">
 import { ref } from 'vue'
-import { TinyHuichartsWordcloud as TinyChartWordcloud } from '@opentiny/vue'
+import { TinyChartWordcloud } from '@opentiny/vue'
 
 const options = ref({
   // 网格大小， 各文本之间距离，默认值16

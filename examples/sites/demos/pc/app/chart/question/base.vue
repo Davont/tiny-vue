@@ -16,13 +16,13 @@
 </template>
 
 <script lang="jsx">
-import { TinyTabs, TinyTabItem, TinyHuichartsLine } from '@opentiny/vue'
+import { TinyTabs, TinyTabItem, TinyChartLine } from '@opentiny/vue'
 
 export default {
   components: {
     TinyTabs,
     TinyTabItem,
-    TinyLine: TinyHuichartsLine
+    TinyLine: TinyChartLine
   },
   data() {
     return {

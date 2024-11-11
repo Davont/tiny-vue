@@ -5,11 +5,11 @@
 </template>
 
 <script lang="jsx">
-import { TinyHuichartsBmap } from '@opentiny/vue'
+import { TinyChartBmap } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyBaiduMap: TinyHuichartsBmap
+    TinyBaiduMap: TinyChartBmap
   },
   data() {
     return {

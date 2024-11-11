@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="jsx">
-import { TinyHuichartsBoxplot as TinyChartBoxplot } from '@opentiny/vue'
+import { TinyChartBoxplot } from '@opentiny/vue'
 import { ref } from 'vue'
 
 function makeData() {

@@ -6,7 +6,7 @@
 
 <script setup lang="jsx">
 import { ref } from 'vue'
-import { TinyHuichartsHistogram as TinyChartHistogram } from '@opentiny/vue'
+import { TinyChartHistogram } from '@opentiny/vue'
 
 const options = ref({
   itemStyle: {

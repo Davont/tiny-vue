@@ -5,11 +5,11 @@
 </template>
 
 <script lang="jsx">
-import { TinyHuichartsBar } from '@opentiny/vue'
+import { TinyChartBar } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyBar: TinyHuichartsBar
+    TinyBar: TinyChartBar
   },
   data() {
     return {
