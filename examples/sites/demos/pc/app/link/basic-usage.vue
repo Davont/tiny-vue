@@ -1,16 +1,21 @@
 <template>
   <div>
-    <tiny-link>默认链接</tiny-link>
+    <tiny-link @click="handleClick">默认链接</tiny-link>
     <tiny-link value="默认链接2"></tiny-link>
   </div>
 </template>
 
 <script>
-import { Link } from '@opentiny/vue'
+import { TinyLink } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyLink: Link
+    TinyLink
+  },
+  methods: {
+    handleClick() {
+      console.log('clicked')
+    }
   }
 }
 </script>

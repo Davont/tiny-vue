@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import { FileUpload, Button } from '@opentiny/vue'
-import { iconEditorListNum } from '@opentiny/vue-icon'
+import { TinyFileUpload, TinyButton } from '@opentiny/vue'
+import { IconEditorList } from '@opentiny/vue-icon'
 
 export default {
   components: {
-    TinyFileUpload: FileUpload,
-    TinyButton: Button
+    TinyFileUpload,
+    TinyButton
   },
   data() {
     return {
@@ -33,7 +33,7 @@ export default {
         // downloadFile: (file) => {
         //   console.log('file', file)
         // },
-        icon: iconEditorListNum()
+        icon: IconEditorList()
       },
       fileList: [
         {

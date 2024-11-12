@@ -16,19 +16,19 @@
 </template>
 
 <script>
-import { ActionMenu } from '@opentiny/vue'
-import { IconPreChecked, iconSuccessful, iconCloseSquare, iconEllipsis } from '@opentiny/vue-icon'
+import { TinyActionMenu } from '@opentiny/vue'
+import { iconWebPlus, iconSuccessful, iconShutdown, iconEllipsis } from '@opentiny/vue-icon'
 
 export default {
   components: {
-    TinyActionMenu: ActionMenu
+    TinyActionMenu
   },
   data() {
     return {
       options: [
         {
           label: '远程登陆',
-          icon: IconPreChecked()
+          icon: iconWebPlus()
         },
         {
           label: '开机',
@@ -36,7 +36,7 @@ export default {
         },
         {
           label: '关机',
-          icon: iconCloseSquare()
+          icon: iconShutdown()
         },
         {
           label: '重启'
