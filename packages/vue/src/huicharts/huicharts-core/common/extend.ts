@@ -53,7 +53,11 @@ export default ({ huiChartOption, extend }) => {
       ]
       if (~attrList.indexOf(key)) {
         // attrList，指定的key才能合并处理
-        mergeOption[key] = merge(mergeOption[key], value)
+        if (key === 'dataZoom') {
+          mergeOption[key] = value
+        } else {
+          mergeOption[key] = merge(mergeOption[key], value)
+        }
       }
     } else {
       // 属性为对象(eg: tooltip)或包含对象的数组(eg: series)

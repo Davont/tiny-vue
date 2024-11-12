@@ -369,13 +369,13 @@ export default {
         this.selfSetting(huiChartOption)
         this.setAnimation(huiChartOption)
         this.applyMarks(this.integrateChart.eChartOption)
-        this.integrateChart.refresh(huiChartOption)
+        this.integrateChart.refresh(cloneDeep(huiChartOption))
         if (this.colorMode !== 'default') {
           huiChartOption.color = this.computedChartColor()
         }
         if (this.extend && Object.keys(this.extend).length !== 0) {
           huiChartOption.extend = this.applyExtend(this.integrateChart.eChartOption)
-          this.integrateChart.refresh(huiChartOption)
+          this.integrateChart.refresh(cloneDeep(huiChartOption))
         }
         this.$emit('handle-color', huiChartOption.color)
         if (this.afterSetOption) {
@@ -419,7 +419,7 @@ export default {
         if (this.colorMode !== 'default') {
           huiChartOption.color = this.computedChartColor()
         }
-        this.integrateChart.setSimpleOption(this.iChartName, huiChartOption, plugins)
+        this.integrateChart.setSimpleOption(this.iChartName, cloneDeep(huiChartOption), plugins)
         this.$emit('handle-color', huiChartOption.color)
         this.applyMarks(this.integrateChart.eChartOption)
       }
@@ -427,7 +427,7 @@ export default {
       // 判断extend，将extend放入配置项中
       if (this.extend && Object.keys(this.extend).length !== 0) {
         huiChartOption.extend = this.applyExtend(this.integrateChart.eChartOption)
-        this.integrateChart.setSimpleOption(this.iChartName, huiChartOption, plugins)
+        this.integrateChart.setSimpleOption(this.iChartName, cloneDeep(huiChartOption), plugins)
       }
       this.integrateChart.render(this.renderOption)
 
