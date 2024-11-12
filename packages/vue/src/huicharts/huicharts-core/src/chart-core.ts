@@ -351,7 +351,6 @@ export default {
       } else {
         this.huiChartOption = cloneDeep(this.options)
       }
-      // let { huiChartOption } = this
       let huiChartOption = cloneDeep(this.huiChartOption)
       if (!huiChartOption.theme) {
         huiChartOption.theme = 'cloud-light'
