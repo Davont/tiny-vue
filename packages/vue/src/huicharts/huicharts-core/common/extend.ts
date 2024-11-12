@@ -19,8 +19,8 @@ function removeNullKeys(obj) {
   return obj
 }
 
-export default ({ option, extend }) => {
-  const cloneOption = cloneDeep(option)
+export default ({ huiChartOption, extend }) => {
+  const cloneOption = cloneDeep(huiChartOption)
   const mergeOption = removeNullKeys(cloneOption)
   if (!extend) {
     return
@@ -59,7 +59,7 @@ export default ({ option, extend }) => {
       // 属性为对象(eg: tooltip)或包含对象的数组(eg: series)
       if (isArr(mergeOption[key]) && isObject(mergeOption[key][0])) {
         // 属性值是包含对象数组
-        mergeOption[key].forEach((option, i) => (mergeOption[key][i] = { ...option, ...value }))
+        mergeOption[key].forEach((huiChartOption, i) => (mergeOption[key][i] = { ...huiChartOption, ...value }))
       } else if (isObject(mergeOption[key])) {
         // 被替换属性值是对象
         let optionBase = mergeOption[key]
