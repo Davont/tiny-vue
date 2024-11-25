@@ -15,8 +15,7 @@ export default {
   mixins: [Core],
   data() {
     return {
-      iChartName: 'BaiduMapChart',
-      option: {}
+      iChartName: 'BaiduMapChart'
     }
   },
   methods: {

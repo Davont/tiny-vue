@@ -129,7 +129,7 @@ export default {
   },
   data() {
     return {
-      option: {},
+      huiChartOption: {},
       eChartOption: {},
       renderOption: {},
       initOpts: {},
