@@ -362,7 +362,7 @@ export default {
       this.timer = null
       this.timer = setTimeout(() => {
         if (this.afterConfig) {
-          huiChartOption = this.afterConfig(optichartOptionon)
+          huiChartOption = this.afterConfig(huiChartOption)
         }
 
         this.selfSetting(huiChartOption)

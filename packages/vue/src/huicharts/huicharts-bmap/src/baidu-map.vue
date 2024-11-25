@@ -26,10 +26,6 @@ export default {
           this.huiChartOption.tooltip = { show: false }
         }
 
-        if (!this.legendVisible) {
-          this.huiChartOption.legend = { show: false }
-        }
-
         return
       }
 
