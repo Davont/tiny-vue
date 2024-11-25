@@ -26,7 +26,7 @@ export default {
     },
     width: { type: String, default: 'auto' },
     height: { type: String, default: '400px' },
-    events: { type: Object, default() {} },
+    events: { type: Object, default() { } },
     initOptions: {
       type: Object,
       default() {
@@ -72,7 +72,7 @@ export default {
     },
     extend: {
       type: Object,
-      default() {}
+      default() { }
     },
     tooltipFormatter: { type: Function },
 
@@ -120,7 +120,7 @@ export default {
     },
     setOptionOpts: {
       type: Object,
-      default() {}
+      default() { }
     },
     colorMode: {
       type: String,
@@ -243,14 +243,14 @@ export default {
     },
 
     size: {
-      handler(val) {
+      handler() {
         this.$nextTick(() => {
           this.integrateChart && this.integrateChart.echartsIns && this.integrateChart.echartsIns.resize()
         })
       }
     },
     colors: {
-      handler(val) {
+      handler() {
         this.refreshChart()
       },
       deep: true
@@ -373,7 +373,7 @@ export default {
           huiChartOption.color = this.computedChartColor()
         }
         if (this.extend && Object.keys(this.extend).length !== 0) {
-          huiChartOption.extend = this.applyExtend(this.integrateChart.eChartOption)
+          huiChartOption.extend = cloneDeep(this.applyExtend(this.integrateChart.eChartOption))
           this.integrateChart.refresh(cloneDeep(huiChartOption))
         }
         this.$emit('handle-color', huiChartOption.color)
