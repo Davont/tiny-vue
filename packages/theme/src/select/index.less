@@ -100,6 +100,16 @@
     }
   }
 
+  &--mini {
+    .@{select-prefix-cls}__tags {
+      padding: var(--tv-Select-tags-padding-mini);
+
+      .tiny-tag {
+        height: 18px;
+      }
+    }
+  }
+
   &__tags {
     position: absolute;
     line-height: normal;
@@ -147,18 +157,6 @@
       -moz-appearance: none;
       appearance: none;
       background-color: transparent;
-
-      &.is-mini {
-        height: var(--tv-Select-height-mini);
-      }
-
-      &.is-small {
-        height: var(--tv-Select-height-small);
-      }
-
-      &.is-medium {
-        height: var(--tv-Select-height-medium);
-      }
     }
 
     &.is-showicon {
@@ -224,10 +222,15 @@
     }
   }
 
+  &.tiny-select__multiple.is-display-only {
+    &.is-hover-expand,
+    &.is-click-expand {
+      vertical-align: top;
+    }
+  }
+
   &.is-hover-expand,
   &.is-click-expand {
-    vertical-align: top;
-
     .@{select-prefix-cls}__tags-group {
       position: absolute;
       top: 0;
@@ -266,6 +269,24 @@
       }
     }
 
+    &.@{select-prefix-cls}--medium {
+      .tiny-select__tags {
+        height: var(--tv-Select-height-medium);
+      }
+    }
+
+    &.@{select-prefix-cls}--small {
+      .tiny-select__tags {
+        height: var(--tv-Select-height-small);
+      }
+    }
+
+    &.@{select-prefix-cls}--mini {
+      .tiny-select__tags {
+        height: var(--tv-Select-height-mini);
+      }
+    }
+
     &.is-hover,
     &.collapse-tag-clicked {
       .@{select-prefix-cls}__tags {
@@ -291,18 +312,6 @@
       position: absolute;
       width: 100%;
     }
-
-    &.@{select-prefix-cls}--small {
-      .@{select-prefix-cls}__tags {
-        padding-top: 2px;
-      }
-    }
-
-    &.@{select-prefix-cls}--mini {
-      .@{select-prefix-cls}__tags {
-        padding-top: 2px;
-      }
-    }
   }
 
   &.is-hover-expand.is-disabled {
@@ -325,11 +334,19 @@
       visibility: hidden;
       position: absolute;
     }
+
+    .tiny-svg {
+      margin-right: 0;
+    }
   }
 
   &.is-disabled,
   &.is-display-only {
     cursor: not-allowed;
+
+    .tiny-select__tags {
+      cursor: not-allowed;
+    }
 
     .@{input-prefix-cls} {
       &__inner {
@@ -338,6 +355,7 @@
 
       &__suffix {
         display: 'inline-block';
+        cursor: not-allowed;
       }
     }
 

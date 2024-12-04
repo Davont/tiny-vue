@@ -5,11 +5,11 @@
 </template>
 
 <script lang="jsx">
-import { Exception } from '@opentiny/vue'
+import { TinyException } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyException: Exception
+    TinyException
   },
   data() {
     return {

@@ -15,6 +15,7 @@
         show-header
         show-footer
         v-bind="options"
+        :esc-closable="true"
       >
         <tiny-form :model="createData" label-width="100px">
           <tiny-form-item label="用户名" prop="username">
@@ -43,7 +44,8 @@ const TinyModal = Modal
 const show = ref(false)
 const options = ref({
   mask: true,
-  maskClosable: true
+  maskClosable: true,
+  escClosable: true
 })
 const createData = ref({
   username: '',

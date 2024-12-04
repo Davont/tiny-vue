@@ -15,8 +15,7 @@ export default {
       'demoId': 'size-column-min-width',
       'name': { 'zh-CN': '总体列宽', 'en-US': 'Minimum width of this column' },
       'desc': {
-        'zh-CN':
-          '<p>通过属性 <code>column-min-width</code> 设置总体列可以调整到的最小宽度，不设置时默认为列头 span 的宽度 + 36（头部固定宽度）。\n</p>\n',
+        'zh-CN': '<p>通过属性 <code>column-min-width</code> 设置总体列可以调整到的最小宽度，不设置时默认72。\n</p>\n',
         'en-US':
           '<p>Minimum width of this column based on the table column attribute <code>min-width</code>; The automatically allocates the remaining space proportionally. \n</p>\n'
       },
@@ -26,7 +25,7 @@ export default {
       'demoId': 'size-min-width',
       'name': { 'zh-CN': '本列最小宽度', 'en-US': 'Set the width of all columns' },
       'desc': {
-        'zh-CN': '<p>通过表格列属性 <code>min-width</code> 本列最小宽度；会自动将剩余空间按比例分配。\n</p>\n',
+        'zh-CN': '<p>通过表格列属性 <code>min-width</code> 设置本列最小宽度；会自动将剩余空间按比例分配。\n</p>\n',
         'en-US':
           '<p>Set the width of all columns through the <code>column-width</code> attribute. The default value is even distribution. \n</p>\n'
       },

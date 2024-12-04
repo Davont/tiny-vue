@@ -7,27 +7,21 @@
 </template>
 
 <script lang="jsx">
-import { Button, Modal, Notify } from '@opentiny/vue'
+import { TinyButton, TinyModal } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyButton: Button
+    TinyButton
   },
   methods: {
     alertClick() {
-      Modal.alert({ message: 'alert 弹框', title: '弹框', tiny_mode: 'mobile' })
+      TinyModal.alert({ message: 'alert 弹框', title: '弹框', tiny_mode: 'mobile' })
     },
     messageClick() {
-      Modal.message({ message: 'message 提示框', title: '弹框', tiny_mode: 'mobile' })
+      TinyModal.message({ message: 'message 提示框', title: '弹框', tiny_mode: 'mobile' })
     },
     confirmClick() {
-      Modal.confirm({ message: '您确定要删除吗？', title: '确定框', tiny_mode: 'mobile' }).then((res) => {
-        Notify({
-          type: 'info',
-          title: '触发回调事件',
-          message: `点击${res}按钮`
-        })
-      })
+      TinyModal.confirm({ message: '您确定要删除吗？', title: '确定框', tiny_mode: 'mobile' }).then((res) => {})
     }
   }
 }

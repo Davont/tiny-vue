@@ -1,6 +1,9 @@
 <template>
   <div>
-    <p><tiny-button @click="loadData">加载数据</tiny-button></p>
+    <div>
+      <tiny-button @click="loadData">加载数据</tiny-button>
+    </div>
+    <br />
     <tiny-grid :data="tableData" show-footer :footer-method="footerMethod" border>
       <tiny-grid-column type="index" width="60"></tiny-grid-column>
       <tiny-grid-column type="selection" width="60"></tiny-grid-column>
@@ -13,13 +16,13 @@
 </template>
 
 <script lang="jsx">
-import { Grid, GridColumn, Button } from '@opentiny/vue'
+import { TinyGrid, TinyGridColumn, TinyButton } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyButton: Button,
-    TinyGrid: Grid,
-    TinyGridColumn: GridColumn
+    TinyButton,
+    TinyGrid,
+    TinyGridColumn
   },
   data() {
     return {

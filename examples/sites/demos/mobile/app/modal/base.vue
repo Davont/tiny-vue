@@ -9,21 +9,21 @@
 </template>
 
 <script lang="jsx">
-import { Button, Modal, Notify } from '@opentiny/vue'
+import { TinyButton, TinyModal } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyButton: Button
+    TinyButton
   },
   methods: {
     baseClick1() {
-      Modal.alert({ message: '单行居中对齐，多行居左对齐', showHeader: false, tiny_mode: 'mobile' })
+      TinyModal.alert({ message: '单行居中对齐，多行居左对齐', showHeader: false, tiny_mode: 'mobile' })
     },
     baseClick2() {
-      Modal.alert({ message: '单行居中对齐，多行居左对齐', title: '标题', tiny_mode: 'mobile' })
+      TinyModal.alert({ message: '单行居中对齐，多行居左对齐', title: '标题', tiny_mode: 'mobile' })
     },
     baseClick3() {
-      Modal.alert({
+      TinyModal.alert({
         message:
           '单行居中对齐，多行居左对齐,单行居中对齐，多行居左对齐单行居中对齐，多行居左对齐单行居中对齐，多行居左对齐',
         title: '标题',
@@ -31,22 +31,10 @@ export default {
       })
     },
     baseClick4() {
-      Modal.confirm({ message: '您确定要删除吗？', tiny_mode: 'mobile' }).then((res) => {
-        Notify({
-          type: 'info',
-          title: '触发回调事件',
-          message: `点击${res}按钮`
-        })
-      })
+      TinyModal.confirm({ message: '您确定要删除吗？', tiny_mode: 'mobile' }).then((res) => {})
     },
     baseClick5() {
-      Modal.confirm({ message: '您确定要删除吗？', showHeader: false, tiny_mode: 'mobile' }).then((res) => {
-        Notify({
-          type: 'info',
-          title: '触发回调事件',
-          message: `点击${res}按钮`
-        })
-      })
+      TinyModal.confirm({ message: '您确定要删除吗？', showHeader: false, tiny_mode: 'mobile' }).then((res) => {})
     }
   }
 }

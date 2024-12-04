@@ -724,7 +724,10 @@ export default {
           mfDemo: ''
         },
         {
-          name: 'IResizableConfig',
+          name: 'resizable-config',
+          meta: {
+            stable: '3.19.0'
+          },
           typeAnchorName: 'IResizableConfig',
           type: 'IResizableConfig',
           defaultValue: '',
@@ -4415,6 +4418,8 @@ interface IEditConfig {
   showStatus?: boolean
   // 自定义编辑规则，返回true可以编辑返回false则禁止编辑
   activeMethod?: ({row: IRow, column: IColumnConfig})=> boolean
+  // （3.19新增）当mode为'row'时，行编辑激活状态下默认会忽略activeMethod，配置为true使其生效
+  activeStrictly?: boolean
 }
       `
     },

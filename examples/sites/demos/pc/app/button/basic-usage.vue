@@ -18,32 +18,42 @@
       <tiny-button type="warning" plain> 警告按钮 </tiny-button>
       <tiny-button type="danger" plain> 危险按钮 </tiny-button>
     </tiny-row>
+    <p>圆角按钮</p>
+    <tiny-row>
+      <tiny-button type="primary" round> 主要按钮 </tiny-button>
+      <tiny-button round> 次要按钮 </tiny-button>
+      <tiny-button type="success" round> 成功按钮 </tiny-button>
+      <tiny-button type="info" round> 信息按钮 </tiny-button>
+      <tiny-button type="warning" round> 警告按钮 </tiny-button>
+      <tiny-button type="danger" round> 危险按钮 </tiny-button>
+    </tiny-row>
+    <p>圆形按钮</p>
     <tiny-row>
       <tiny-button :icon="IconSearch" circle></tiny-button>
-      <tiny-button type="primary" :icon="IconEdit" circle></tiny-button>
+      <tiny-button type="primary" :icon="IconEditor" circle></tiny-button>
       <tiny-button type="success" :icon="IconYes" circle></tiny-button>
       <tiny-button type="info" :icon="IconMail" circle></tiny-button>
       <tiny-button type="warning" :icon="IconStarO" circle></tiny-button>
-      <tiny-button type="danger" :icon="IconDel" circle></tiny-button>
+      <tiny-button type="danger" :icon="IconDeleteL" circle></tiny-button>
     </tiny-row>
   </tiny-layout>
 </template>
 
 <script>
-import { Button, Layout, Row } from '@opentiny/vue'
-import { IconDel, IconYes, IconEdit, IconMail, IconStarO, IconSearch } from '@opentiny/vue-icon'
+import { TinyButton, TinyLayout, TinyRow } from '@opentiny/vue'
+import { IconDeleteL, IconYes, IconEditor, IconMail, IconStarO, IconSearch } from '@opentiny/vue-icon'
 
 export default {
   components: {
-    TinyButton: Button,
-    TinyLayout: Layout,
-    TinyRow: Row
+    TinyButton,
+    TinyLayout,
+    TinyRow
   },
   data() {
     return {
-      IconDel: IconDel(),
+      IconDeleteL: IconDeleteL(),
       IconYes: IconYes(),
-      IconEdit: IconEdit(),
+      IconEditor: IconEditor(),
       IconMail: IconMail(),
       IconStarO: IconStarO(),
       IconSearch: IconSearch()

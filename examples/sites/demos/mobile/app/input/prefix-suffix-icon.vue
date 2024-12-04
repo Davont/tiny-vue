@@ -1,17 +1,17 @@
 <template>
   <div class="demo-input-icons">
     <tiny-input v-model="value" :prefix-icon="IconSearch" placeholder="前置图标示例"></tiny-input>
-    <tiny-input v-model="value" :suffix-icon="IconSearch"  placeholder="后置图标示例"></tiny-input>
+    <tiny-input v-model="value" :suffix-icon="IconSearch" placeholder="后置图标示例"></tiny-input>
   </div>
 </template>
 
 <script>
-import { Input } from '@opentiny/vue'
+import { TinyInput } from '@opentiny/vue-mobile'
 import { iconSearch } from '@opentiny/vue-icon'
 
 export default {
   components: {
-    TinyInput: Input
+    TinyInput
   },
   data() {
     return {

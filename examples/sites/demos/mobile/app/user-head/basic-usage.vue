@@ -26,11 +26,11 @@
 </template>
 
 <script lang="jsx">
-import { UserHead } from '@opentiny/vue'
+import { TinyUserHead } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyUserHead: UserHead
+    TinyUserHead
   },
   data() {
     return {

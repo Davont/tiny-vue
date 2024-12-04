@@ -16,20 +16,20 @@
 </template>
 
 <script lang="jsx">
-import { Milestone } from '@opentiny/vue'
+import { TinyMilestone } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyMilestone: Milestone
+    TinyMilestone
   },
   data() {
     return {
       statusMap: {
-        completed: 'var(--ti-common-color-line-active)',
-        doing: '#7ED321',
-        back: '#f5222d',
+        completed: '#f0f7ff',
+        doing: '#e8faff',
+        back: '#edf7df',
         end: '#faad14',
-        cancel: '#d9d9d9'
+        cancel: '#f230301A'
       },
       milestoneData: [
         {

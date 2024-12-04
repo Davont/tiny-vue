@@ -5,11 +5,11 @@
 </template>
 
 <script lang="jsx">
-import { Badge } from '@opentiny/vue'
+import { TinyBadge } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyBadge: Badge
+    TinyBadge
   },
   data() {
     return {

@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import { Radio } from '@opentiny/vue'
+import { TinyRadio } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyRadio: Radio
+    TinyRadio
   },
   data() {
     return {

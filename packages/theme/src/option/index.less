@@ -72,6 +72,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      vertical-align: top;
     }
   }
 
@@ -80,7 +81,7 @@
     background-color: var(--tv-Option-bg-color-hover);
   }
 
-  &:not(:has(.tiny-option__checkbox-wrap)).selected {
+  &:not(.tiny-option_all):not(:has(.tiny-option__checkbox-wrap)).selected {
     color: var(--tv-Option-text-color-selected);
   }
 
@@ -93,9 +94,14 @@
     cursor: not-allowed;
 
     .tiny-svg {
-      fill: var(--tv-Option-icon-color-checked-disabled);
+      &.checked-sur,
+      &.halfselect {
+        fill: var(--tv-Option-icon-color-checked-disabled);
+      }
 
       &.check {
+        fill: var(--tv-Option-icon-color-unchecked-disabled); /* #bfbfbf */
+
         path:first-of-type {
           fill: var(--tv-Option-icon-bg-color-disabled);
         }

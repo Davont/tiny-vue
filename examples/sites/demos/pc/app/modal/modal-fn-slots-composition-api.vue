@@ -37,10 +37,10 @@ function btnClick() {
       footer: (scopeData) => (
         <div>
           <Link style="margin-right: 8px">记录最近事项</Link>
-          <Button onClick={() => scopeData.cancel()}>取消</Button>
-          <Button type="primary" onClick={() => scopeData.confirm()}>
+          <TinyButton onClick={() => scopeData.cancel()}>取消</TinyButton>
+          <TinyButton type="primary" onClick={() => scopeData.confirm()}>
             保存
-          </Button>
+          </TinyButton>
         </div>
       )
     }

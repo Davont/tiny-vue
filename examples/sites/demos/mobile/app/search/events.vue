@@ -6,11 +6,11 @@
 </template>
 
 <script lang="jsx">
-import { Search } from '@opentiny/vue'
+import { TinySearch } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinySearch: Search
+    TinySearch
   },
   data() {
     return {

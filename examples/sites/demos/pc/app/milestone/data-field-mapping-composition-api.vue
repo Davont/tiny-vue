@@ -17,14 +17,14 @@
 
 <script setup lang="jsx">
 import { ref } from 'vue'
-import { Milestone as TinyMilestone } from '@opentiny/vue'
+import { TinyMilestone } from '@opentiny/vue'
 
 const statusMap = ref({
-  completed: 'var(--ti-common-color-line-active)',
-  doing: '#7ED321',
-  back: '#f5222d',
+  completed: '#f0f7ff',
+  doing: '#e8faff',
+  back: '#edf7df',
   end: '#faad14',
-  cancel: '#d9d9d9'
+  cancel: '#f230301A'
 })
 const milestoneData = ref([
   {

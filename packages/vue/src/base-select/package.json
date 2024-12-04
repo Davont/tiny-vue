@@ -1,7 +1,7 @@
 {
   "name": "@opentiny/vue-base-select",
   "type": "module",
-  "version": "3.18.0",
+  "version": "3.20.0",
   "description": "",
   "license": "MIT",
   "sideEffects": false,
@@ -26,10 +26,11 @@
     "@opentiny/vue-select-dropdown": "workspace:~",
     "@opentiny/vue-tag": "workspace:~",
     "@opentiny/vue-theme": "workspace:~",
-    "@opentiny/vue-tooltip": "workspace:~"
+    "@opentiny/vue-tooltip": "workspace:~",
+    "@opentiny/vue-tree": "workspace:~"
   },
   "devDependencies": {
     "@opentiny-internal/vue-test-utils": "workspace:*",
-    "vitest": "^0.31.0"
+    "vitest": "catalog:"
   }
 }

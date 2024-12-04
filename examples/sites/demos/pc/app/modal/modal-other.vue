@@ -15,6 +15,7 @@
         show-header
         show-footer
         v-bind="options"
+        :esc-closable="true"
       >
         <tiny-form :model="createData" label-width="100px">
           <tiny-form-item label="用户名" prop="username">

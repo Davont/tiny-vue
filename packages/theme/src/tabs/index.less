@@ -255,8 +255,8 @@
 
       .@{tabs-prefix-cls}__icon-close {
         display: inline-flex;
-        width: 14px;
-        height: 14px;
+        width: var(--tv-Tabs-icon-size-close);
+        height: var(--tv-Tabs-icon-size-close);
         justify-content: center;
         align-items: center;
       }
@@ -432,8 +432,6 @@
 
         &.is-active {
           top: -1px;
-          border-bottom: var(--tv-Tabs-item-bottom-border-weight) var(--tv-Tabs-item-bottom-border-style)
-            var(--tv-Tabs-item-bottom-border-color);
           border-top: var(--tv-Tabs-item-top-right-border-weight) solid var(--tv-Tabs-border-color); // aurora新增
           border-left: 1px solid var(--tv-Tabs-border-color);
           border-right: var(--tv-Tabs-item-top-right-border-weight) solid var(--tv-Tabs-border-color); // aurora新增
@@ -546,7 +544,6 @@
             &:hover {
               border-color: var(--tv-Tabs-border-color); // aurora新增
               color: var(--tv-Tabs-dark-text-color-hover);
-              background: var(--tv-Tabs-dark-bg-color-hover);
             }
           }
 
@@ -587,6 +584,17 @@
       height: var(--tv-Tabs-button-card-item-height);
       line-height: var(--tv-Tabs-button-card-item-height);
       border: 1px solid transparent;
+
+      .@{tabs-prefix-cls} {
+        &__icon-close {
+          margin-left: -20px;
+          margin-right: 24px;
+        }
+
+        &__item-separator {
+          left: 1px;
+        }
+      }
 
       &.is-disabled {
         color: var(--tv-Tabs-item-disabled-text-color);
@@ -634,11 +642,7 @@
           display: inline-flex;
           justify-content: center;
           align-items: center;
-          width: var(--tv-Tabs-icon-size-close);
-          height: var(--tv-Tabs-icon-size-close);
-          line-height: var(--tv-Tabs-icon-size-close);
           vertical-align: middle;
-          overflow: hidden;
           transform-origin: 100% 50%;
         }
       }
@@ -1223,8 +1227,8 @@
     height: 16px;
   }
 
-  &&--top &--button-card &__item:last-child &__item-separator,
-  &&--top &--button-card &__item.is-active &__item-separator {
+  &&--button-card &__item:last-child &__item-separator,
+  &&--button-card &__item.is-active &__item-separator {
     display: none;
   }
 

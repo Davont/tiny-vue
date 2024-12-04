@@ -7,11 +7,11 @@
 </template>
 
 <script lang="jsx">
-import { Switch } from '@opentiny/vue'
+import { TinySwitch } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinySwitch: Switch
+    TinySwitch
   },
   data() {
     return {

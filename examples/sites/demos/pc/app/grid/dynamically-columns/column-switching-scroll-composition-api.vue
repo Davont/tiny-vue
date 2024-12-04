@@ -1,6 +1,9 @@
 <template>
   <div>
-    <tiny-button @click="changeFlag">{{ flag ? '隐藏' : '显示' }}最后一列</tiny-button>
+    <div>
+      <tiny-button @click="changeFlag">{{ flag ? '隐藏' : '显示' }}最后一列</tiny-button>
+    </div>
+    <br />
     <tiny-grid
       ref="grid"
       column-width="200"
@@ -48,7 +51,7 @@
 </template>
 
 <script setup>
-import { Grid as TinyGrid, GridColumn as TinyGridColumn, Button as TinyButton } from '@opentiny/vue'
+import { TinyGrid, TinyGridColumn, TinyButton } from '@opentiny/vue'
 import { ref } from 'vue'
 
 const flag = ref(false)

@@ -24,12 +24,12 @@
 </template>
 
 <script lang="jsx">
-import { DropdownMenu, DropdownItem } from '@opentiny/vue'
+import { TinyDropdownMenu, TinyDropdownItem } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyDropdownMenu: DropdownMenu,
-    TinyDropdownItem: DropdownItem
+    TinyDropdownMenu,
+    TinyDropdownItem
   },
   data() {
     return {

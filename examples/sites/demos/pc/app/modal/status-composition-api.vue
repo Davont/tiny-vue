@@ -34,13 +34,14 @@ import { ref } from 'vue'
 
 const TinyModal = Modal
 const show = ref(false)
+const status = ref('')
 
 function infoClick(mode) {
   mode === 1 && Modal.alert({ message: '基本提示图标', status: 'info' })
   mode === 2 && Modal.message({ message: '基本提示图标', status: 'info' })
   if (mode === 3) {
-    this.status = 'info'
-    this.show = true
+    status.value = 'info'
+    show.value = true
   }
 }
 
@@ -48,8 +49,8 @@ function successClick(mode) {
   mode === 1 && Modal.alert({ message: '成功提示图标', status: 'success' })
   mode === 2 && Modal.message({ message: '成功提示图标', status: 'success' })
   if (mode === 3) {
-    this.status = 'success'
-    this.show = true
+    status.value = 'success'
+    show.value = true
   }
 }
 
@@ -57,8 +58,8 @@ function warningClick(mode) {
   mode === 1 && Modal.alert({ message: '警告提示图标', status: 'warning' })
   mode === 2 && Modal.message({ message: '警告提示图标', status: 'warning' })
   if (mode === 3) {
-    this.status = 'warning'
-    this.show = true
+    status.value = 'warning'
+    show.value = true
   }
 }
 
@@ -66,8 +67,8 @@ function errorClick(mode) {
   mode === 1 && Modal.alert({ message: '错误提示图标', status: 'error' })
   mode === 2 && Modal.message({ message: '错误提示图标', status: 'error' })
   if (mode === 3) {
-    this.status = 'error'
-    this.show = true
+    status.value = 'error'
+    show.value = true
   }
 }
 
@@ -75,8 +76,8 @@ function loadingClick(mode) {
   mode === 1 && Modal.alert({ message: '加载提示图标', status: 'loading' })
   mode === 2 && Modal.message({ message: '加载提示图标', status: 'loading' })
   if (mode === 3) {
-    this.status = 'loading'
-    this.show = true
+    status.value = 'loading'
+    show.value = true
   }
 }
 </script>

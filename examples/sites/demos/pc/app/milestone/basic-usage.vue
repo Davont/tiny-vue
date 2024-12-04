@@ -17,11 +17,11 @@
 </template>
 
 <script lang="jsx">
-import { Milestone } from '@opentiny/vue'
+import { TinyMilestone } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyMilestone: Milestone
+    TinyMilestone
   },
   data() {
     return {
@@ -30,13 +30,13 @@ export default {
         // 对应 status = completed
         completed: '#1890ff',
         // 对应 status = doing
-        doing: '#7eb7fc',
+        doing: '#e8faff',
         // 对应 status = back
-        back: '#ff8800',
+        back: '#edf7df',
         // 对应 status = end
         end: '#faad14',
         // 对应 status = cancel
-        cancel: '#fce2e0'
+        cancel: '#f230301A'
       },
       // 数据源
       milestoneData: [

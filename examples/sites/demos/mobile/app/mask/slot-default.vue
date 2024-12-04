@@ -1,6 +1,6 @@
 <template>
   <div class="mobile-mask-demo">
-    <tiny-button  @click="visible = true">默认插槽示例</tiny-button>
+    <tiny-button @click="visible = true">默认插槽示例</tiny-button>
     <tiny-mask v-model:visible="visible">
       <div class="mask-content">
         <p>这是自定义内容</p>
@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import { Mask, Button } from '@opentiny/vue'
+import { TinyMask, TinyButton } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyMask: Mask,
-    TinyButton: Button
+    TinyMask,
+    TinyButton
   },
   data() {
     return {

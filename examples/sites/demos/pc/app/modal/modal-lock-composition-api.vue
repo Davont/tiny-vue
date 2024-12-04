@@ -46,7 +46,7 @@ function removeBodyScroll() {
   document.body.style.height = '100vh'
   document.body.classList.add('of-hidden')
 }
-function btnClick() {
+function btnClick(lockType) {
   options.value.lockScroll = lockType === 'scroll'
   options.value.lockView = lockType === 'view'
 
@@ -59,7 +59,7 @@ function btnClick() {
   })
 }
 
-function openModal() {
+function openModal(lockType) {
   options.value.lockScroll = lockType === 'scroll'
   options.value.lockView = lockType === 'view'
   show.value = true

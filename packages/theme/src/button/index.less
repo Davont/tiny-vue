@@ -8,7 +8,9 @@
 .@{button-prefix-cls} {
   .inject-Button-vars();
 
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   appearance: none;
   text-align: center;
   white-space: nowrap;
@@ -104,6 +106,7 @@
   .color-active-mixin(@theme, @plain) {
     @bg: %('var(--tv-Button-bg-color%a-active-%a)', @plain, @theme);
     @border: %('var(--tv-Button-border-color%a-active-%a)', @plain, @theme);
+    @c: %('var(--tv-Button-text-color%a-active-%a)', @plain, @theme);
 
     &:active,
     &:focus,
@@ -111,6 +114,7 @@
     &.is-active {
       background-color: e(@bg);
       border-color: e(@border);
+      color: e(@c);
     }
   }
   // 激活态： 叠加到 ghost 状态上。
@@ -258,6 +262,9 @@
   &.is-only-icon.is-only-icon {
     // 只有default主题的边框色和 hover 边框色 是和主题色相反的。其它都随主题的色。
     // 仅图标的plain场景，无对应示例，不处理。
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     &.@{button-prefix-cls}--default {
       border-color: var(--tv-Button-border-color-only-icon-default);
 

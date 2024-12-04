@@ -14,11 +14,11 @@
 </template>
 
 <script lang="jsx">
-import { TimeLine } from '@opentiny/vue'
+import { TinyTimeLine } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyTimeLine: TimeLine
+    TinyTimeLine
   },
   data() {
     return {

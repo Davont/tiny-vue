@@ -37,9 +37,9 @@
     "change-case": "^4.1.2"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
+    "typescript": "catalog:",
     "tsup": "7.2.0",
-    "vite": "^4.3.8",
+    "vite": "catalog:",
     "rimraf": "^3.0.2"
   }
 }

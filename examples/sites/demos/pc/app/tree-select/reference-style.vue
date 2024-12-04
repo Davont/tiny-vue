@@ -16,18 +16,18 @@
 </template>
 
 <script>
-import { TreeSelect } from '@opentiny/vue'
+import { TinyTreeSelect } from '@opentiny/vue'
 import { iconPopup } from '@opentiny/vue-icon'
 
 export default {
   components: {
-    TinyTreeSelect: TreeSelect
+    TinyTreeSelect
   },
   data() {
     return {
       tinyIconPopup: iconPopup(),
       value: '',
-      value2: [],
+      value2: [9],
       treeOp: {
         data: [
           {

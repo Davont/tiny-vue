@@ -1,24 +1,24 @@
 <template>
   <div class="mobile-mask-demo">
-    <tiny-button  @click="visible = true">点击展示遮罩层</tiny-button>
+    <tiny-button @click="visible = true">点击展示遮罩层</tiny-button>
     <tiny-mask v-model:visible="visible" :z-index="zIndex"></tiny-mask>
   </div>
 </template>
 
 <script>
-import { Mask, Button } from '@opentiny/vue'
+import { TinyMask, TinyButton } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyMask: Mask,
-    TinyButton: Button
+    TinyMask,
+    TinyButton
   },
   data() {
     return {
       visible: false,
       zIndex: 9999
     }
-  },
+  }
 }
 </script>
 

@@ -3,7 +3,7 @@
     <div class="demo-content">
       <!-- DEMO 的标题 + 说明desc + 示例wcTag -->
       <div class="ti-f-r ti-f-pos-between ti-f-box-end">
-        <div class="demo-title">{{ demo.name[langKey] }}</div>
+        <h2 class="demo-title">{{ demo.name[langKey] }}</h2>
         <div class="demo-options">
           <tiny-tooltip
             placement="top"
@@ -92,6 +92,7 @@ const { apiModeState, apiModeFn } = useApiMode()
 export default defineComponent({
   name: 'Demo',
   props: ['demo', 'currDemoId'],
+  emits: ['mounted'],
   components: {
     TinyTooltip,
     TinyTabs,
@@ -99,7 +100,7 @@ export default defineComponent({
     TinyButton,
     AsyncHighlight
   },
-  setup(props) {
+  setup(props, { emit }) {
     const { templateModeState } = useTemplateMode()
     const { currentThemeKey } = useTheme()
     const isMobileFirst = computed(() => {
@@ -213,6 +214,9 @@ export default defineComponent({
         const log = `${demoName}示例资源不存在，请检查文件名是否正确？`
         cmp.value = <div>{log}</div>
       }
+      nextTick(() => {
+        emit('mounted')
+      })
     })
 
     const demos = ref(props.demo)

@@ -10,17 +10,17 @@
 </template>
 
 <script>
-import { TreeSelect } from '@opentiny/vue'
+import { TinyTreeSelect } from '@opentiny/vue'
 
 export default {
   components: {
-    TinyTreeSelect: TreeSelect
+    TinyTreeSelect
   },
   data() {
     return {
       value1: '',
       value2: 1,
-      value3: [1, 4, 9, 10],
+      value3: [9, 6],
       treeOp: {
         data: [
           {

@@ -3,11 +3,11 @@
 </template>
 
 <script lang="jsx">
-import { Progress } from '@opentiny/vue'
+import { TinyProgress } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyProgress: Progress
+    TinyProgress
   },
   data() {
     return {

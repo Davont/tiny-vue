@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import { Label } from '@opentiny/vue'
+import { TinyLabel } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyLabel: Label
+    TinyLabel
   }
 }
 </script>

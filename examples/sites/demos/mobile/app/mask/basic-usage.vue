@@ -1,6 +1,6 @@
 <template>
   <div class="mobile-mask-demo">
-    <tiny-button  @click="visible = true">点击展示遮罩层</tiny-button>
+    <tiny-button @click="visible = true">点击展示遮罩层</tiny-button>
 
     <p v-if="showMsg">遮罩层click事件已触发！</p>
 
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import { Mask, Button } from '@opentiny/vue'
+import { TinyMask, TinyButton } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyMask: Mask,
-    TinyButton: Button
+    TinyMask,
+    TinyButton
   },
   data() {
     return {
@@ -26,7 +26,7 @@ export default {
     handleClick() {
       this.showMsg = true
     }
-  },
+  }
 }
 </script>
 

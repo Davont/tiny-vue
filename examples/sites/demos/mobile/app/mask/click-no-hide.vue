@@ -1,20 +1,20 @@
 <template>
   <div class="mobile-mask-demo">
-    <tiny-button @click="visible=true">点击显示遮罩层</tiny-button>
+    <tiny-button @click="visible = true">点击显示遮罩层</tiny-button>
 
     <tiny-mask v-model:visible="visible" :cancel-touch="true">
-      <tiny-button @click="visible=false">点击此处关闭遮罩层</tiny-button>
+      <tiny-button @click="visible = false">点击此处关闭遮罩层</tiny-button>
     </tiny-mask>
   </div>
 </template>
 
 <script>
-import { Mask, Button } from '@opentiny/vue'
+import { TinyMask, TinyButton } from '@opentiny/vue-mobile'
 
 export default {
   components: {
-    TinyMask: Mask,
-    TinyButton: Button
+    TinyMask,
+    TinyButton
   },
   data() {
     return {
