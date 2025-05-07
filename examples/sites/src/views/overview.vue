@@ -86,7 +86,7 @@ export default defineComponent({
       palceMenus: new Array(14)
     })
 
-    const isPlus = computed(() => location.href.includes('tiny-vue-plus'))
+    const isPlus = computed(() => import.meta.env.VITE_APP_MODE === 'plus')
     function debounce(fn, delay) {
       let timeout = 0
       return (value) => {
@@ -214,7 +214,7 @@ export default defineComponent({
   }
 }
 
-.dark .component-card {
+html.dark .component-card {
   &:hover {
     box-shadow: 1px 1px 6px 6px rgba(255, 255, 255, 0.08);
   }
@@ -229,7 +229,7 @@ export default defineComponent({
   width: 24.25%;
 }
 
-.dark .overview-card-container {
+html.dark .overview-card-container {
   background-color: var(--tv-color-bg-dark);
 }
 

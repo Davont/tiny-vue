@@ -37,6 +37,11 @@ const docMenusChildren = [
       theme: ['default']
     }
   },
+  {
+    'title': '暗黑模式',
+    'titleEn': 'theme-dark',
+    'key': 'theme-dark'
+  },
   { 'title': '表单校验配置', 'titleEn': 'formValid', 'key': 'form-valid' },
   { 'title': '常见问题', 'titleEn': 'faq', 'key': 'faq' },
   {
@@ -160,10 +165,7 @@ export const cmpMenus = [
       {
         'nameCn': '树形选择器',
         'name': 'TreeSelect',
-        'key': 'tree-select',
-        'meta': {
-          'experimental': '3.17.0'
-        }
+        'key': 'tree-select'
       }
     ]
   },
@@ -293,7 +295,7 @@ export const cmpMenus = [
       { 'nameCn': 'K线图', 'name': 'Candle Chart', 'key': 'chart-candle' },
       { 'nameCn': '仪表盘', 'name': 'Gauge Chart', 'key': 'chart-gauge' },
       { 'nameCn': '树图', 'name': 'Tree Chart', 'key': 'chart-tree' },
-      { 'nameCn': '水球图', 'name': 'liquidfill Chart', 'key': 'chart-liquidfill' },
+      { 'nameCn': '水球图', 'name': 'Liquidfill Chart', 'key': 'chart-liquidfill' },
       { 'nameCn': '词云图', 'name': 'Wordcloud Chart', 'key': 'chart-wordcloud' },
       { 'nameCn': '旭日图', 'name': 'Sunburst Chart', 'key': 'chart-sunburst' },
       { 'nameCn': '拓扑图', 'name': 'Graph Chart', 'key': 'chart-graph' },

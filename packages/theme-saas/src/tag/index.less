@@ -15,6 +15,10 @@
   @apply whitespace-nowrap;
   @apply inline-flex;
   @apply items-center;
+
+  @apply overflow-hidden;
+  @apply text-ellipsis;
+
   .tag-variant(
     theme('colors.color.info.primary.DEFAULT'),
     theme('colors.transparent'),
@@ -37,7 +41,7 @@
     .tag-variant(
       theme('colors.color.text.primary'),
       theme('colors.transparent'),
-      theme('colors.color.bg.2'),
+      theme('colors.color.bg.3'),
       theme('colors.color.icon.primary'),
       theme('colors.color.icon.primary'),
       theme('colors.color.none.DEFAULT')

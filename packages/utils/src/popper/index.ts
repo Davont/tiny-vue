@@ -76,6 +76,10 @@ const isFixed = (el: HTMLElement) => {
     return true
   }
 
+  // 处理遇到 shadowRoot的情况
+  if (el.host) {
+    el = el.host
+  }
   return el.parentNode ? isFixed(el.parentNode as HTMLElement) : false
 }
 
@@ -699,9 +703,10 @@ export class PopperJS {
     let center = reference[side] + (arrowOffset || reference[calcProp] / 2 - arrowSize / 2)
     let sideValue = center - popper[side]
 
-    // 猜测是上下边距留下8px的距离。 确保箭头不太靠顶靠底。
-    // 此时sideValue为“popper的顶- 箭头 - 8px” 的位置。
-    sideValue = Math.max(Math.min(popper[calcProp] - arrowSize - 8, sideValue), 8)
+    // 猜测是上下边距留下4px的距离。 确保箭头不太靠顶靠底。
+    // 此时sideValue为“popper的顶- 箭头 - 4px” 的位置。
+    const safeLeft = 4
+    sideValue = Math.max(Math.min(popper[calcProp] - arrowSize - safeLeft, sideValue), safeLeft)
     arrowStyle[side] = sideValue
     arrowStyle[altSide] = ''
 
@@ -709,7 +714,7 @@ export class PopperJS {
     const params = this._options.placement.split('-')
     if (this._options.adjustArrow && ~['top', 'bottom'].indexOf(params[0]) && side === 'left') {
       if (params[1] === 'start') {
-        arrowStyle.left = 8
+        arrowStyle.left = safeLeft
       } else if (!params[1]) {
         arrowStyle.left = (popperRect.width - arrowRect.width) / 2
       }
@@ -900,5 +905,10 @@ export class PopperJS {
     boundaries.top = boundaries.top + padding
 
     return boundaries
+  }
+
+  // https://popper.js.org/docs/v2/lifecycle/#set-new-options
+  setOptions(options: PopperOptions) {
+    Object.assign(this._options, options)
   }
 }

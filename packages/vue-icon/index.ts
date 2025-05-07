@@ -260,6 +260,7 @@ import IconPanelMini from './src/panel-mini'
 import IconPanelNormal from './src/panel-normal'
 import IconPauseCircle from './src/pause-circle'
 import IconPause from './src/pause'
+import IconPersonHistory from './src/person-history'
 import IconPicture from './src/picture'
 import IconPieChart from './src/pie-chart'
 import IconPlusCircle from './src/plus-circle'
@@ -455,6 +456,7 @@ import IconMaterial from './src/material'
 import IconMilestone from './src/milestone'
 import IconMinscreenRight from './src/minscreen-right'
 import IconNoData from './src/no-data'
+import IconGridNoData from './src/grid-no-data'
 import IconNoNews from './src/no-news'
 import IconNoPerm from './src/no-perm'
 import IconNoResult from './src/no-result'
@@ -1198,6 +1200,8 @@ export {
   IconPauseCircle as iconPauseCircle,
   IconPause,
   IconPause as iconPause,
+  IconPersonHistory,
+  IconPersonHistory as iconPersonHistory,
   IconPicture,
   IconPicture as iconPicture,
   IconPieChart,
@@ -1520,6 +1524,8 @@ export {
   IconMinscreenRight as iconMinscreenRight,
   IconNoData,
   IconNoData as iconNoData,
+  IconGridNoData,
+  IconGridNoData as iconGridNoData,
   IconNoNews,
   IconNoNews as iconNoNews,
   IconNoPerm,
@@ -1902,6 +1908,7 @@ export default {
   IconPanelNormal,
   IconPauseCircle,
   IconPause,
+  IconPersonHistory,
   IconPicture,
   IconPieChart,
   IconPlusCircle,
@@ -2063,6 +2070,7 @@ export default {
   IconMilestone,
   IconMinscreenRight,
   IconNoData,
+  IconGridNoData,
   IconNoNews,
   IconNoPerm,
   IconNoResult,
